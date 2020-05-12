@@ -1,0 +1,29 @@
+// main: master.sass
+.card
+  +grid-center
+  +box_shadow(1)
+
+  background-color: $silver-pink
+  width: 80vw
+  border-radius: 12px
+  color: $dark-purple
+  transition: all 1.2s ease
+
+  article
+    display: none
+    color: $silver-pink
+    width: 95%
+
+  &:hover
+    +box_shadow(3)
+
+    width: 95vw
+    margin: 20px 0px
+    background-color: $pale-silver
+
+    article
+      display: block
+      color: $dark-purple
+
+    h4
+      font-size: 30px

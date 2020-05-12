@@ -1,0 +1,38 @@
+// main: master.sass
+
+.nav
+  +clean
+  list-style: none
+  ul
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+    align-items: center
+    justify-items: end
+    width: 3.2rem
+    background-color: $purple
+    transition: width 1.2s
+    li
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr
+      height: 3.2rem
+      align-self: center
+      padding-right: 6px
+      background-color: inherit
+      a
+        display: none
+    &:hover
+
+      width: 16rem
+      li
+        grid-template-columns: 1fr 3.2rem
+        padding-right: 0
+        a
+          display: inline
+          color: $chalk
+          padding-right: 10px
+          align-self: center
+
+          &:visited
+            color: $orange

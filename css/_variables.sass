@@ -1,10 +1,11 @@
 // main: master.sass
+@import ./mixins.sass
 // pallette
-$pale-silver: #dbcdc6
-$silver-pink: #BEA8A7
-$tuscany: #C09891
-$dark-liver: #56494E
-$dark-purple: #391D2E
+$purple: #5F0F40
+$orange: #FF6D00
+$black: black
+$slate: #31293E
+$chalk: #DADDD8
 
 // fonts
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap")
@@ -12,21 +13,21 @@ $dark-purple: #391D2E
 $lato: "Lato", sans-serif
 $neuton: "Neuton", serif
 
-// mixins
-=grid-center($gap: 0)
-  display: grid
-  align-items: center
-  justify-items: center
-  grid-gap: $gap
+//defaults
+hmtl
+  font-size: 16px
+  font-family: $lato
+  color: $chalk
+  margin: 0
+  padding: 0
 
-=box_shadow($level)
-  @if $level == 1
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)
-  @else if $level == 2
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
-  @else if $level == 3
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)
-  @else if $level == 4
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22)
-  @else if $level == 5
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22)
+body
+  +clean
+  background-color: $slate
+  color: $chalk
+  font-family: $lato
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 5px
+  font-family: $neuton

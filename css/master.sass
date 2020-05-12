@@ -1,21 +1,7 @@
 @import ./variables.sass
+@import ./nav.sass
 
 body
-  margin: 0
-  padding-top: 3px
-  background-color: $dark-liver
-  font-family: $lato
-
-  .grid
-    +grid-center(5px)
-
-    .hero img
-      border-radius: 50%
-      padding-top: 5px
-
-    @import ./card.sass
-
-h1, h2, h3, h4, h5, h6
-  margin: 0
-  padding: 5px
-  font-family: $neuton
+  display: grid
+  grid-template-columns: 2.2rem 1fr
+  grid-template-rows: 1fr
